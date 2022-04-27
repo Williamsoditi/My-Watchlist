@@ -10,8 +10,14 @@
 
 <!-- Content block -->
 {% block content %}
+<div class="container">
+  <form>
+    <input type="text" name="movie_query" placeholder="Search for a movie" class="form-control">
+    <input type="submit" value="Submit" class="btn btn-primary mt-3">
+  </form>
+</div>
 <!-- Popular movie -->
-<h3>Popular Movies</h3>
+<h3 class="align-center">Popular Movies</h3>
 <ul>
   {{ macro.displayMovieList(popular)}}
 </ul>
