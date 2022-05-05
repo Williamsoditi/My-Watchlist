@@ -24,4 +24,6 @@ migrate = Migrate(app,db)
 manager.add_command('db',MigrateCommand)
 
 if __name__ == '__main__':
+    app.secret_key = 'qwerty12345'
+    app.config['SESSION_TYPE'] = 'filesystem'
     manager.run()
